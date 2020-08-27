@@ -21,5 +21,27 @@ public class CesarKryptering {
 		
 		return kryptertStreng;
 	}
+	
+	public static String dekrypterFraFrekvens(String s, double[] normalFrequency) {
+		double[] frequencyThis = tekstOgTelling.FrequencyOfString.frequencyOfString(s);
+		
+		int highestNormal = 0;
+		for(int i = 0; i < normalFrequency.length; i++) {
+			if(normalFrequency[i] > normalFrequency[highestNormal]) {
+				highestNormal = i;
+			}
+		}
+		
+		int highestThis = 0;
+		for(int i = 0; i < frequencyThis.length; i++) {
+			if(frequencyThis[i] > frequencyThis[highestNormal]) {
+				highestThis = i;
+			}
+		}
+		
+		int offset = highestThis - highestNormal;
+		
+		return dekrypter(s, (26 - offset) % 26);
+	}
 
 }
