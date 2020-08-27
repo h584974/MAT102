@@ -14,6 +14,9 @@ public class CesarKryptering {
 			else if(c >= 'A' && c <= 'Z') {
 				kryptertStreng += (char)((((c - 'A') + n) % 26) + 'A');
 			}
+			else if(c == ' ') {
+				kryptertStreng += c;
+			}
 		}
 		
 		return kryptertStreng;
