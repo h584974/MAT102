@@ -62,5 +62,17 @@ public class CesarKryptering {
 		
 		return dekrypter(s, (26 - offset) % 26);
 	}
+	
+	public static void skrivAlleDekrypteringer(String s) {
+		for(int i = 0; i < 26; i++) {
+			System.out.println(dekrypter(s, i));
+		}
+	}
 
 }
+
+
+
+
+
+

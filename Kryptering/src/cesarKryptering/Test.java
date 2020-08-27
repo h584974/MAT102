@@ -13,6 +13,8 @@ public class Test {
 		System.out.println(CesarKryptering.dekrypterFraFrekvens(s2, frequency));
 		System.out.println(CesarKryptering.dekrypterE(s2));
 		
+		CesarKryptering.skrivAlleDekrypteringer("tmdde");
+		
 	}
 	
 }
