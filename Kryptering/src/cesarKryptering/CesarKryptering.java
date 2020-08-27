@@ -39,6 +39,8 @@ public class CesarKryptering {
 			}
 		}
 		
+		System.out.println(highestThis + " " + highestNormal);
+		
 		int offset = highestThis - highestNormal;
 		
 		return dekrypter(s, (26 - offset) % 26);
