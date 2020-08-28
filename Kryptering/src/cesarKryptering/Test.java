@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String... blaaaa) {
 		
-		String s1 = "This is a test String that hopefully gets decrypted correctly";
+		String s1 = "This is a test string that hopefully gets decrypted correctly";
 		double[] frequency = tekstOgTelling.FrequencyOfString.frequencyOfString(s1);
 		String s2 = CesarKryptering.dekrypter(s1, 15);
 		

@@ -41,9 +41,15 @@ public class CesarKryptering {
 		
 		System.out.println(highestThis + " " + highestNormal);
 		
-		int offset = highestThis - highestNormal;
+		int offset = 0;
+		if(highestNormal > highestThis) {
+			offset = highestNormal - highestThis;
+		}
+		else {
+			offset = 26 - (highestThis - highestNormal);
+		}
 		
-		return dekrypter(s, (26 - offset) % 26);
+		return dekrypter(s, offset);
 	}
 	
 	public static String dekrypterE(String s) {
@@ -58,9 +64,15 @@ public class CesarKryptering {
 			}
 		}
 		
-		int offset = highestThis - highestNormal;
+		int offset = 0;
+		if(highestNormal > highestThis) {
+			offset = highestNormal - highestThis;
+		}
+		else {
+			offset = 26 - (highestThis - highestNormal);
+		}
 		
-		return dekrypter(s, (26 - offset) % 26);
+		return dekrypter(s, offset);
 	}
 	
 	public static void skrivAlleDekrypteringer(String s) {
